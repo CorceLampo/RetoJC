@@ -83,10 +83,77 @@ img {
 
 /*=============== HEADER & NAV ===============*/
 
+header{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--body-color);
+  z-index: var(--z-fixed);
+}
+
+.nav{
+  position: relative;
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo,
+.nav__close,
+.nav__toggle{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.nav__logo{
+  color: var(--text-color);
+  font-weight: var(--font-semi-bold);
+  column-gap: .5rem;
+}
+
+.nav__logo i{
+  font-size: 1.25rem;
+  font-weight: initial;
+
+}
+
+.nav__toggle, .nav__close{
+  background-color: var(--first-color-alt);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
 
 
 /* Navigation for mobile devices */
 
+.nav__list{
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.5rem;
+}
+
+.nav__link{
+  color: var(--text-color);
+  font-weight: var(--font-semi-bold);
+  transition: color .4s;
+}
+
+.nav__link:hover{
+  color:var(--title-color);
+  width: max-content;
+  background-color: var(--body-color);
+  color: var(--title-color);
+  border: 2px solid var(--body-color);
+  font-weight: var(--font-semi-bold);
+  padding: 1rem 3rem;
+}
 
 /* Show menu */
 
